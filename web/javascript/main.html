@@ -4,21 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS</title>
+    <style>
+      #percent-out {
+        background-color: yellow;
+        padding: 8px;
+        border-radius: 5px;
+        width: 150px;
+        text-wrap: wrap;
+      }
+    </style>
   </head>
   <body>
+    <fieldset>
+      <legend>Find Percentage %</legend>
+      <table border="2" cellpadding="5" cellspacing="0">
+        <tr>
+          <td>English</td>
+          <td><input type="number" id="eng" /></td>
+        </tr>
+
+        <tr>
+          <td>Math</td>
+          <td><input type="number" id="math" /></td>
+        </tr>
+
+        <tr>
+          <td>Urdu</td>
+          <td><input type="number" id="urdu" /></td>
+        </tr>
+
+        <tr>
+          <td>Computer</td>
+          <td><input type="number" id="com" /></td>
+        </tr>
+
+        <tr>
+          <td>Islamiyat</td>
+          <td><input type="number" id="islam" /></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td><input type="button" onclick="findPercentage()" value="Submit" /></td>
+        </tr>
+
+        <tr>
+          <td>Remarks:</td>
+          <td>
+            <p id="percent-out">NOTE: Fill all the field for find percentage</p>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <hr />
 
     <div>
-        <input id="no" type="number" placeholder="Enter any number">
-        <button onclick="getResult()">Show Result</button>
-        <br>
-        <span id="output"></span>
+      <input id="no" type="number" placeholder="Enter any number" />
+      <button onclick="getResult()">Show Result</button>
+      <br />
+      <span id="output"></span>
     </div>
-    <hr>
+    <hr />
     <div>
-        <input id="no-day" type="number" placeholder="Enter number of the Day">
-        <button onclick="getDay()">Show Result</button>
-        <br>
-        <span id="day-output"></span>
+      <input id="no-day" type="number" placeholder="Enter number of the Day" />
+      <button onclick="getDay()">Show Result</button>
+      <br />
+      <span id="day-output"></span>
+    </div>
+    <hr />
+    <div>
+      <input id="units" type="number" placeholder="Enter units" />
+      <button onclick="calcBill()">Show Result</button>
+      <br />
+      <span id="unit-output"></span>
     </div>
 
     <!-- JS -->
