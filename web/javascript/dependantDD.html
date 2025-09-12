@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .colorlist{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        span{
+            background-color: red;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+    </style>
 </head>
-<body>
+<body onload="showColors()">
     <select id="country-list" onchange="getSelected()">
         <option value="">Select Country</option>
         <option value="1">Pakistan</option>
@@ -14,7 +27,16 @@
     </select>
 
     <select id="city-list"></select>
+    <hr>
+    <button onclick="chngBG()">Click</button>
 
+    <hr>
+
+    <h1>Multiple colors</h1>
+    <div class="colorlist" id="colorlist"></div>
+
+
+    <!-- js -->
     <script src="../assets/js/dependantDD.js"></script>
     
 </body>

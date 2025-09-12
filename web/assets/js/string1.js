@@ -15,7 +15,7 @@ var mytext =
 var mytext_result = mytext.replaceAll("book", "News paper");
 console.log(mytext_result);
 
-var myemail = "abc@gmailcom";
+var myemail = "abc@gmail.com";
 var validateAt = myemail.indexOf("@");
 var validateDot = myemail.indexOf(".");
  if (validateAt == -1 || validateDot == -1) {
