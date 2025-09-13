@@ -8,6 +8,7 @@ const users = [
     {id: 7, name: "Vector", email: "Vector@gmail.com", accountStatus: "Approved"},
 ];
 
+
 let accountStatus = "Not Approved";
 let filteredUsers = users.filter((users)=>{
     if (users.accountStatus == accountStatus) {
