@@ -1,21 +1,20 @@
 run();
 function run(){
-    let clr = localStorage.getItem("heading_color");
-    let heading = document.getElementById("myheading");
+    let bg_color = localStorage.getItem("bg_color");
+    let txt_color = localStorage.getItem("txt_color");
 
-    heading.style.color = clr;
-    
-    // console.log("Stored color: " + clr);
+    document.body.style.backgroundColor = bg_color;
+    document.body.style.color = txt_color;
 }
-function getColor(){
-    let clr = document.getElementById("clr").value;
-    let heading = document.getElementById("myheading");
-    console.log(clr);
+function getBgColor(){
+    let clr = document.getElementById("bg_clr").value;
 
-    // document.body.style.backgroundColor = clr;
-    heading.style.color = clr;
+    document.body.style.backgroundColor = clr;
+    localStorage.setItem("bg_color", clr);
+}
+function getTxtColor(){
+    let clr = document.getElementById("txt_clr").value;
 
-    // localstorage
-    localStorage.setItem("heading_color", clr);
-
+    document.body.style.color = clr;
+    localStorage.setItem("txt_color", clr);
 }
