@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btn">Click</button>
+    <h1 id="text">Jquery</h1>
+
+    <hr>
+    <input type="password" id="pswd">
+    <input type="checkbox" id="check">
+    <!-- js -->
+    <script src="../assets/js/jquery-3.7.7.min.js"></script>
+    <script>
+        $(document).ready(function (){
+            console.log("Jquery is running");
+            console.log(show("This is sample", " text"));
+
+            $("#btn").on("click", function(){
+                $("#text").css({"color": "yellowgreen", "background-color": "#333" });
+            });
+
+            // hide/show password
+            $("#check").click(function (){
+                $(this).prop("checked") ?
+                $("#pswd").attr("type", "text") :
+                $("#pswd").attr("type", "password")
+            });
+
+            function show(a,b){
+                return a+b;
+            }
+
+
+        })
+    </script>
+
+</body>
+</html>
