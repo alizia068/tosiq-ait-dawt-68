@@ -1,4 +1,21 @@
+@import "tailwindcss";
+
+body{
+    background-color: #F6F8FE;
+}
 .section-heading{
     color: #999;
     font-family: "monospace"
+}
+
+/* profile */
+.profile-img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.center-item{
+    display: grid;
+    place-items: center;
 }

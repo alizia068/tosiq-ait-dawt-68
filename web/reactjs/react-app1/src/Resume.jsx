@@ -5,17 +5,17 @@ import PersonalInformation from "./components/PersonalInformation"
 import Skills from "./components/Skills"
 import Summary from "./components/Summary"
 
-const App = () => {
+const Resume = () => {
   return (
-    <>
+    <div className="w-[750px] my-8 mx-auto">
     <PersonalInformation />
     <Summary />
     <Experience />
     <Education />
     <Skills />
     <Certifications />
-    </>
+    </div>
   )
 }
 
-export default App
+export default Resume
