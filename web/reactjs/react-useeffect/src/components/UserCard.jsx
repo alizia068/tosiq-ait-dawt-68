@@ -15,7 +15,7 @@ const UserCard = ({ user }) => {
               <span className="block line-clamp-1">{user.name}</span>
               <small className="block mt-1">{user.email}</small>
             </div>
-            <div className="text-gray-400 text-sm">@{user.username}</div>
+            <div className="text-gray-400 text-[11px]">@{user.username}</div>
           </div>
           <div className="mt-6 text-sm text-gray-500">
             <div>

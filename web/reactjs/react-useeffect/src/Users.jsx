@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import UserCard from "./components/UserCard";
-
+import {MoonLoader} from 'react-spinners'
 const Users = () => {
   const [users, setUsers] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(()=>{
     const getUsers = async () => {
@@ -12,6 +13,7 @@ const Users = () => {
         console.log("No user found")
       } else {
         setUsers(usersList)
+        setLoading(false)
       }
     }
 
@@ -23,7 +25,8 @@ const Users = () => {
       <div className="m-4">
         <span className="text-xl block">User Data</span>
         <div className="mt-3">
-          { users.length > 0 ?
+          { loading ? <div>Loading <MoonLoader /></div> :
+          users.length > 0 ?
             <div className="grid grid-cols-12 gap-3">
               {users.map((user, i)=>{
                 return (
