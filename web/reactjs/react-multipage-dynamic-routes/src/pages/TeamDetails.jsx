@@ -48,7 +48,7 @@ const TeamDetails = () => {
                    <GrMail className="inline -mt-1 mr-3" />{" "} {teamMember.email}
                 </div>
                 <div className="">
-                  <GrPhone className="inline -mt-1 mr-3" />{" "} @{teamMember.phone}
+                  <GrPhone className="inline -mt-1 mr-3" />{" "} {teamMember.phone}
                 </div>
               </div>
             </div>
