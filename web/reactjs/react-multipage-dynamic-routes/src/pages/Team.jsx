@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 import { ALL_USER_API } from "../resources/api";
 const Team = () => {
   const [team, setTeam] = useState([])
+  const [searchText, setSearchText] = useState("")
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -28,7 +29,14 @@ const Team = () => {
       <div>
         <Navbar />
         <div className='p-5 bg-white/50 m-5 rounded-lg'>
-          <div>My Team</div>
+          <div className="flex justify-between items-center">
+            <div>My Team</div>
+            <div>
+              <input value={searchText} onChange={(e) => setSearchText(e.target.value)}
+              className="bg-white py-1 px-3 rounded focus:outline-amber-500 shadow"
+              type="text" placeholder="Search here" />
+            </div>
+          </div>
           <div className="mt-3">
             {loading ? <div>Loading <MoonLoader /></div> :
               team.length > 0 ?
