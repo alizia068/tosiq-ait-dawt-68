@@ -12,9 +12,6 @@ const App = () => {
       My name is : {data.name} <br />
       My age is : {data.age}
 
-
-
-
       <Component1 data={text}> 
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea earum ipsa maxime esse itaque doloribus error suscipit perspiciatis necessitatibus laudantium dolores sed incidunt ducimus, labore odio fuga delectus? Id, odio.</p>
       </Component1>
