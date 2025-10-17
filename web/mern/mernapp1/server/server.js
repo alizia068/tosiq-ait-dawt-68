@@ -1,8 +1,9 @@
 import express from  'express';
-
+import dotenv from 'dotenv'
+dotenv.config();
 const app = express();
 // 3000, 5000, 7000, 8000, 8080,
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 const userRoles = [
     { id: 101, username: "usmanhaider242", role: "Super Admin" },
