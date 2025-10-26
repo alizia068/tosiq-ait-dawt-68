@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 export const connectDB = async () => {
     try {
-        const db = await mongoose.connect(process.env.MONGOdb_LOCAL);
+        const db = await mongoose.connect(process.env.MONGODB_LIVE_TEST);
 
         if (db) {
             console.log(`Database is connected: ${db.connection.host}`)
