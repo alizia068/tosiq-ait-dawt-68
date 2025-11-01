@@ -1,1 +1,32 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+.notes-header {
+    display: flex;
+    align-items: center; justify-content: space-between
+}
+
+.action-links {
+    display: flex;
+    gap: 16px
+}
+
+.icon {
+    margin-top: -4px;
+}
+
+.edit-icon {
+    color: #4E61D3;
+    text-decoration: none;
+    padding: 4px 8px;
+}
+
+.delete-icon {
+    color: #F75270;
+    text-decoration: none;
+    padding: 4px 8px;
+}
+
+:where(.edit-icon, .delete-icon):hover {
+    background-color: #f1f1f1;
+    border-radius: 8px
+}

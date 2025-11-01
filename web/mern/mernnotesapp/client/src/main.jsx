@@ -6,13 +6,15 @@ import { Toaster } from 'react-hot-toast'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 
 const router = createBrowserRouter([
-  { path: '/', element: <App /> }
+  { path: '/', element: <App /> },
+  // { path: '/notes/edit/:id', element: <DetailNote /> }
+  { path: '/notes/update', element: <App /> }
 ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Toaster />
     <RouterProvider router={router}>
-      <Toaster />
       <App />
     </RouterProvider>
   </StrictMode>,

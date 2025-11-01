@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button, Card, Col, Container, Form, Modal, Row } from "react-bootstrap";
-import { ALL_NOTES, CREATE_NOTE } from "./resource/api";
+import { ALL_NOTES, CREATE_NOTE, DELETE_NOTE } from "./resource/api";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { FaEdit, FaTrash } from "react-icons/fa";
+import { NavLink } from "react-router";
 const App = () => {
   const [notes, setNotes] = useState([]);
   const [show, setShow] = useState(false);
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const handleCloseNoteModal = () => setShow(false);
   const handleShowNoteModal = () => setShow(true);
@@ -18,7 +20,9 @@ const App = () => {
       if (result.data && result.data.notes) {
         setNotes(result.data.notes);
       }
-    } catch (error) {}
+    } catch (error) {
+      toast.error("Something went wrong")
+    }
   };
 
   useEffect(() => {
@@ -37,7 +41,7 @@ const App = () => {
         console.log(response.data.message)
         toast.success(response.data.message);
         await getAllNotes(); // Refetch notes
-
+        reset();
         handleCloseNoteModal();
         
       } else {
@@ -48,16 +52,44 @@ const App = () => {
     }
   };
 
+  const handleDelete = async (e, note) => {
+    e.preventDefault();
+    if (!note._id) {
+      toast.error("Note id not found");
+      return;
+    }
+
+    if (!window.confirm("Are you sure your want to delete this?")) {
+      toast.success("You saved the record")
+      return;
+    }
+    try {
+      const result  = await axios.delete(`${DELETE_NOTE}/${note._id}`)
+      if (result && result.data) {
+        toast.success(result.data.message)
+        await getAllNotes(); // Refetch notes
+      } else {
+        toast.error(result.data.message)
+      }
+    } catch (error) {
+      toast.error("Something went wrong")
+    }
+  }
+
   return (
     <Container>
       <div>
-        <h2>Note List</h2>
-        <Button variant="primary" onClick={handleShowNoteModal}>
-          Add note
-        </Button>
+        <div className="my-4 notes-header">
+          <h2>Note List</h2>
+          <div>
+            <Button variant="primary" onClick={handleShowNoteModal}>
+            Add note
+          </Button>
+          </div>
+        </div>
 
         <div className="text-center">{notes.length == 0 && "No notes found"}</div>
-        <div>
+        <div className="mt-4">
           <Row className="g-3">
           {notes.map((note, i) => {
             return (
@@ -68,8 +100,17 @@ const App = () => {
                     <Card.Text className="my-2 text-muted">
                       {note.description}
                     </Card.Text>
-                    {/* <Card.Link href="#">Card Link</Card.Link>
-                    <Card.Link href="#">Another Link</Card.Link> */}
+                    <div className="action-links">
+                      {/* detail page link */}
+                      <NavLink className="edit-icon" to="#"> 
+                        <FaEdit className="icon" /> Edit note
+                      </NavLink>
+
+                      {/* delete note link */}
+                      <NavLink className='delete-icon' onClick={(e) => handleDelete(e, note) }>
+                        <FaTrash className="icon" /> Delete note
+                      </NavLink>
+                    </div>
                   </Card.Body>
                 </Card>
               </Col>
