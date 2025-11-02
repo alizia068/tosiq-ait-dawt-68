@@ -5,6 +5,24 @@ export const getAllNotes = async (req, res) => {
   return res.send({ status: true, notes });
 };
 
+export const getSingleNote = async (req, res) => {
+  const id = req.params.id;
+  try {
+    const note = await Notes.findById({ _id: id });
+    if (!note) {
+      return res.send({status: false, code: 404, message: "Note not found or maybe  deleted"});
+    }
+    if (note) {
+      return res.send({ status: true, note });
+    } else {
+      return res.send({
+        status: false,
+        message: "Note not found or maybe deleted",
+      });
+    }
+  } catch (error) {}
+};
+
 export const createNote = async (req, res) => {
   const { title, description } = req.body;
   if (!title || !description)
@@ -31,6 +49,28 @@ export const deleteNote = async (req, res) => {
       return res.send({ status: true, message: "Note has been deleted" });
     } else {
       return res.send({ status: true, message: "Note not found" });
+    }
+  } catch (error) {
+    return res.send({ status: false, message: "Something went wrong" });
+  }
+};
+
+export const updateNode = async (req, res) => {
+  const id = req.params.id;
+  const note = req.body;
+  if (!id)
+    return res.send({
+      status: false,
+      code: 404,
+      message: "Note id note found!",
+    });
+
+  try {
+    const updated = await Notes.findByIdAndUpdate({ _id: id }, note);
+    if (updated) {
+      return res.send({ status: true, message: "Note updated successfully" });
+    } else {
+      return res.send({ status: false, message: "Failed to update note" });
     }
   } catch (error) {
     return res.send({ status: false, message: "Something went wrong" });

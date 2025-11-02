@@ -30,3 +30,9 @@
     background-color: #f1f1f1;
     border-radius: 8px
 }
+
+.edit-form-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

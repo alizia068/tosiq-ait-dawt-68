@@ -4,10 +4,11 @@ import './index.css'
 import App from './App.jsx'
 import { Toaster } from 'react-hot-toast'
 import { createBrowserRouter, RouterProvider } from 'react-router'
+import DetailNote from './DetailNote.jsx'
 
 const router = createBrowserRouter([
   { path: '/', element: <App /> },
-  // { path: '/notes/edit/:id', element: <DetailNote /> }
+  { path: '/notes/edit/:id', element: <DetailNote /> },
   { path: '/notes/update', element: <App /> }
 ])
 

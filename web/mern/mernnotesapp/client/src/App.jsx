@@ -102,7 +102,7 @@ const App = () => {
                     </Card.Text>
                     <div className="action-links">
                       {/* detail page link */}
-                      <NavLink className="edit-icon" to="#"> 
+                      <NavLink className="edit-icon" to={`/notes/edit/${note._id}`}> 
                         <FaEdit className="icon" /> Edit note
                       </NavLink>
 
