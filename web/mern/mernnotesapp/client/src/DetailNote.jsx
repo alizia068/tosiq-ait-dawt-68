@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { NavLink, useParams } from "react-router";
-import { SINGLE_NOTE, UPDATE_NOTE } from "./resource/api";
+import { SINGLE_NOTE, UPDATE_NOTE } from "./resource/apis";
 import toast from "react-hot-toast";
 
 const DetailNote = () => {
@@ -37,7 +37,10 @@ const DetailNote = () => {
   const handleUpdateNote = async (data) => {
     try {
       const updatedNote = { title: data.title, description: data.description };
-      const response = await axios.patch( `${UPDATE_NOTE}/${noteId}`, updatedNote );
+      const response = await axios.patch(
+        `${UPDATE_NOTE}/${noteId}`,
+        updatedNote
+      );
 
       if (response.data.code === 404) {
         toast.error(response.data.message);
