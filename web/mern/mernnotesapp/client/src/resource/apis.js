@@ -1,4 +1,5 @@
 export const SIGNUP_URL = "http://localhost:5000/api/v1/auth/signup"
+export const LOGIN_URL = "http://localhost:5000/api/v1/auth/login"
 
 export const ALL_NOTES = "http://localhost:5000/api/v1/notes";
 export const SINGLE_NOTE = "http://localhost:5000/api/v1/notes";

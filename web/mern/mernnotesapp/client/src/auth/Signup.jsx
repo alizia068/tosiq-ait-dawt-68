@@ -1,37 +1,36 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Button, Container, Form, NavLink } from "react-bootstrap";
+import { Button, Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { SIGNUP_URL } from "../resource/apis";
-import { useNavigate } from "react-router";
+import { useNavigate, NavLink } from "react-router";
 
 const Signup = () => {
   const { register, handleSubmit, reset } = useForm();
-  const [ isLoading, setIsLoading ] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  // update
+  // register user
   const handleSignup = async (data) => {
     if (!data.name || !data.email || !data.password) {
-        return toast.error("Signup fields are required")
+      return toast.error("Signup fields are required");
     }
     try {
-        setIsLoading(true)
-        const response = await axios.post(SIGNUP_URL, data)
-        if (response.data.status == true) {
-            toast.success(response.data.message)
-            navigate('/login');
-            return;
-        } else {
-            toast.error(response.data.message)
-        }
-      
+      setIsLoading(true);
+      const response = await axios.post(SIGNUP_URL, data);
+      if (response.data.status == true) {
+        toast.success(response.data.message);
+        navigate("/login");
+        return;
+      } else {
+        toast.error(response.data.message);
+        return;
+      }
     } catch (error) {
-        setIsLoading(false)
-        toast.error("Something went wrong!");
+      toast.error("Something went wrong!");
     } finally {
-        setIsLoading(false)
+      setIsLoading(false);
     }
   };
 
@@ -77,15 +76,15 @@ const Signup = () => {
             </Form.Group>
 
             <div className="edit-form-btn">
-              { isLoading ? 
-              <Button type="submit" variant="primary" disabled>
-                Signing up please wait...
-              </Button> : 
-              <Button type="submit" variant="primary">
-                Signup
-              </Button>
-
-              }
+              {isLoading ? (
+                <Button type="submit" variant="primary" disabled>
+                  Signing up please wait...
+                </Button>
+              ) : (
+                <Button type="submit" variant="primary">
+                  Signup
+                </Button>
+              )}
             </div>
           </Form>
         </div>

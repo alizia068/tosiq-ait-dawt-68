@@ -17,7 +17,11 @@ const DetailNote = () => {
 
   const getSingleNote = async () => {
     try {
-      const result = await axios.get(`${SINGLE_NOTE}/${noteId}`);
+      const result = await axios.get(`${SINGLE_NOTE}/${noteId}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`
+        }
+      });
       if (result.data.code === 404) {
         toast.error(result.data.message);
         return;
@@ -37,20 +41,17 @@ const DetailNote = () => {
   const handleUpdateNote = async (data) => {
     try {
       const updatedNote = { title: data.title, description: data.description };
-      const response = await axios.patch(
-        `${UPDATE_NOTE}/${noteId}`,
-        updatedNote
-      );
+      const response = await axios.patch(`${UPDATE_NOTE}/${noteId}`, updatedNote, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`
+        }
+      });
 
-      if (response.data.code === 404) {
-        toast.error(response.data.message);
-        return;
-      }
-
-      if (response) {
+      if (response.data.status == true) {
         toast.success(response.data.message);
       } else {
         toast.error(response.data.message);
+        return;
       }
     } catch (error) {
       toast.error("Something went wrong!");

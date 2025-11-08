@@ -24,9 +24,16 @@ const NotesList = () => {
 
   const getAllNotes = async () => {
     try {
-      const result = await axios.get(ALL_NOTES);
-      if (result.data && result.data.notes) {
+      const result = await axios.get(ALL_NOTES, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`
+        }
+      });
+      if (result.data && result.data.status == true) {
         setNotes(result.data.notes);
+      } else {
+        toast.error(result.data.message);
+        return;
       }
     } catch (error) {
       toast.error("Something went wrong");
@@ -44,22 +51,26 @@ const NotesList = () => {
     }
 
     try {
-      const response = await axios.post(CREATE_NOTE, data);
-      if (response) {
-        console.log(response.data.message);
+      const response = await axios.post(CREATE_NOTE, data, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`
+        }
+      });
+      if (response.data.status == true) {
         toast.success(response.data.message);
         await getAllNotes(); // Refetch notes
         reset();
         handleCloseNoteModal();
       } else {
         toast.error(response.data.message);
+        return;
       }
     } catch (error) {
       toast.error("Something went wrong!");
     }
   };
 
-  const handleDelete = async (e, note) => {
+  const handleDeleteNote = async (e, note) => {
     e.preventDefault();
     if (!note._id) {
       toast.error("Note id not found");
@@ -71,12 +82,16 @@ const NotesList = () => {
       return;
     }
     try {
-      const result = await axios.delete(`${DELETE_NOTE}/${note._id}`);
-      if (result && result.data) {
-        toast.success(result.data.message);
+      const response = await axios.delete(`${DELETE_NOTE}/${note._id}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`
+        }
+      });
+      if (response.data.status == true) {
+        toast.success(response.data.message);
         await getAllNotes(); // Refetch notes
       } else {
-        toast.error(result.data.message);
+        toast.error(response.data.message);
       }
     } catch (error) {
       toast.error("Something went wrong");
@@ -121,7 +136,7 @@ const NotesList = () => {
                         {/* delete note link */}
                         <NavLink
                           className="delete-icon"
-                          onClick={(e) => handleDelete(e, note)}
+                          onClick={(e) => handleDeleteNote(e, note)}
                         >
                           <FaTrash className="icon" /> Delete note
                         </NavLink>
