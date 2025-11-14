@@ -1,10 +1,12 @@
 import express from 'express'
-import { login, signup } from '../controllers/userController.js';
+import { allUsers, login, sendOTP, signup } from '../controllers/userController.js';
 
 const userRoute = express.Router();
 
 // http://localhost:5000/api/v1/auth/signup
+userRoute.get('/auth/users', allUsers)
 userRoute.post('/auth/signup', signup)
 userRoute.post('/auth/login', login)
+userRoute.post('/auth/forgot-password', sendOTP)
 
 export default userRoute

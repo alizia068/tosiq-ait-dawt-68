@@ -8,8 +8,8 @@ import { LOGIN_URL } from "../resource/apis";
 
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
-    const [isLoading, setIsLoading] = useState(false);
-    const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   // update
   const handleLogin = async (data) => {

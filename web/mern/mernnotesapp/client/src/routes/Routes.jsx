@@ -1,12 +1,12 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from 'react-router'
-import DetailNote from '../DetailNote.jsx'
-import NotesList from '../NotesList.jsx'
-import Login from '../auth/Login.jsx'
-import Signup from '../auth/Signup.jsx'
-import ForgotPassword from '../auth/ForgotPassword.jsx'
-import VerifyOtp from '../auth/VerifyOtp.jsx'
-import ResetPassword from '../auth/ResetPassword.jsx'
+import { createBrowserRouter, RouterProvider } from "react-router";
+import DetailNote from "../pages/DetailNote.jsx";
+import NotesList from "../pages/NotesList.jsx";
+import Login from "../auth/Login.jsx";
+import Signup from "../auth/Signup.jsx";
+import ForgotPassword from "../auth/ForgotPassword.jsx";
+import VerifyOtp from "../auth/VerifyOtp.jsx";
+import ResetPassword from "../auth/ResetPassword.jsx";
 
 const Routes = () => {
   const router = createBrowserRouter([
@@ -20,9 +20,8 @@ const Routes = () => {
     { path: "/notes/edit/:id", element: <DetailNote /> },
     { path: "/notes/update", element: <NotesList /> },
     { path: "*", element: <NotesList /> },
-
   ]);
-  return <RouterProvider router={router}/>
+  return <RouterProvider router={router} />;
 };
 
 export default Routes;

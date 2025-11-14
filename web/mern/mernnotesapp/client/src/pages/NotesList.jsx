@@ -9,15 +9,18 @@ import {
   Modal,
   Row,
 } from "react-bootstrap";
-import { ALL_NOTES, CREATE_NOTE, DELETE_NOTE } from "./resource/apis";
+import { ALL_NOTES, CREATE_NOTE, DELETE_NOTE } from "../resource/apis";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { FaEdit, FaTrash } from "react-icons/fa";
-import { NavLink } from "react-router";
+import { NavLink, useParams } from "react-router";
+import Nav from "../components/Nav";
 const NotesList = () => {
   const [notes, setNotes] = useState([]);
   const [show, setShow] = useState(false);
   const { register, handleSubmit, reset } = useForm();
+    const params = useParams();
+    console.log(params.user);
 
   const handleCloseNoteModal = () => setShow(false);
   const handleShowNoteModal = () => setShow(true);
@@ -26,8 +29,8 @@ const NotesList = () => {
     try {
       const result = await axios.get(ALL_NOTES, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`
-        }
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
       });
       if (result.data && result.data.status == true) {
         setNotes(result.data.notes);
@@ -53,8 +56,8 @@ const NotesList = () => {
     try {
       const response = await axios.post(CREATE_NOTE, data, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`
-        }
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
       });
       if (response.data.status == true) {
         toast.success(response.data.message);
@@ -84,8 +87,8 @@ const NotesList = () => {
     try {
       const response = await axios.delete(`${DELETE_NOTE}/${note._id}`, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`
-        }
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
       });
       if (response.data.status == true) {
         toast.success(response.data.message);
@@ -101,14 +104,7 @@ const NotesList = () => {
   return (
     <Container>
       <div>
-        <div className="my-4 notes-header">
-          <h2>Note List</h2>
-          <div>
-            <Button variant="primary" onClick={handleShowNoteModal}>
-              Add note
-            </Button>
-          </div>
-        </div>
+        <Nav />
 
         <div className="text-center">
           {notes.length == 0 && "No notes found"}

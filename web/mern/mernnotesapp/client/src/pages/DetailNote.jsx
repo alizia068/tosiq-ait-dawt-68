@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { NavLink, useParams } from "react-router";
-import { SINGLE_NOTE, UPDATE_NOTE } from "./resource/apis";
+import { SINGLE_NOTE, UPDATE_NOTE } from "../resource/apis";
 import toast from "react-hot-toast";
 
 const DetailNote = () => {
@@ -19,8 +19,8 @@ const DetailNote = () => {
     try {
       const result = await axios.get(`${SINGLE_NOTE}/${noteId}`, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`
-        }
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
       });
       if (result.data.code === 404) {
         toast.error(result.data.message);
@@ -41,11 +41,15 @@ const DetailNote = () => {
   const handleUpdateNote = async (data) => {
     try {
       const updatedNote = { title: data.title, description: data.description };
-      const response = await axios.patch(`${UPDATE_NOTE}/${noteId}`, updatedNote, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`
+      const response = await axios.patch(
+        `${UPDATE_NOTE}/${noteId}`,
+        updatedNote,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
         }
-      });
+      );
 
       if (response.data.status == true) {
         toast.success(response.data.message);

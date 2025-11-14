@@ -1,6 +1,14 @@
 import bcrypt from "bcryptjs";
 import jwt from 'jsonwebtoken';
 import User from "../models/userModel.js";
+import { generateOTP } from "../utils/generateOTP.js";
+import { sendEmail } from "../utils/sendEmail.js";
+
+export const allUsers = async (req, res) => {
+    const users = await User.find({});
+    return res.send({status: true, users})
+}
+
 export const signup =  async (req, res) => {
     const data = req.body;
     if (!data.name || !data.email || !data.password) {
@@ -12,7 +20,8 @@ export const signup =  async (req, res) => {
         if (user) {
             return res.send({status: false, message: "Email is already in use, try another"})
         }
-        // encrypt password
+
+        // encrypt password :: 12345 => $deqwd32342f25f52232f2
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(data.password, salt);
         user = {
@@ -42,9 +51,10 @@ export const login =  async (req, res) => {
         if (!user) {
             return res.send({status: false, message: "User not found with this email"})
         }
-        // matching password
+        // matching password :: 12345 => $deqwd32342f25f52232f2
         const isMatched = await bcrypt.compare(data.password, user.password);
 
+        // e2dfhw2hdf28dh232y3ed823y8yd239d4342/324242d423d424deryyuj734ttqrq/2343rf234r2d21
         if (isMatched) {
             const token = jwt.sign(
                 {user: {id: user._id, name: user.name, email: user.email}}, 
@@ -58,4 +68,34 @@ export const login =  async (req, res) => {
     } catch (error) {
         console.log("Error: ", error)
     }
+}
+
+export const sendOTP = async (req, res) => {
+    const { email } = req.body;
+    if (!email) return res.send({status: false, message: "Please provide valid email"})
+
+    try {
+        let user = await User.findOne({email})
+        // check existing user
+        if (!user) {
+            return res.send({status: false, message: "User not found with this email"})
+        }
+        const otp = generateOTP();
+        const content = `
+        Hi ${user.name},
+        This is your requested one time password (OTP):
+        <h2>${otp}</h2>
+        <small>
+            <strong>Note: Don't share this OTP with anyone</strong>
+        </small>
+        `;
+        sendEmail(user.email, "Reset password OTP", content);
+        user.otp        = otp;
+        user.isVerified = false;
+        await user.save();
+        return res.send({status: true, message: "OTP has been send to your email"})
+    } catch (error) {
+        console.log("Error: ", error)
+    }
+
 }
