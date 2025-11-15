@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { NavLink, useParams } from "react-router";
 import { SINGLE_NOTE, UPDATE_NOTE } from "../resource/apis";
 import toast from "react-hot-toast";
+import Nav from "../components/Nav";
 
 const DetailNote = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -64,16 +65,15 @@ const DetailNote = () => {
 
   return (
     <Container>
-      <div>
-        <div className="my-4 notes-header">
-          <h2>Edit note ({noteId ?? ""})</h2>
+      
+        <Nav> 
           <div>
             <NavLink variant="primary" to="/">
               All notes
             </NavLink>
           </div>
-        </div>
-
+        </Nav>
+      <div>
         <div>
           <Form onSubmit={handleSubmit(handleUpdateNote)}>
             <Form.Group className="mb-3" controlId="formGroupTitle">

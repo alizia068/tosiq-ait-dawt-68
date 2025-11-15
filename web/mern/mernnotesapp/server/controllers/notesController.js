@@ -1,8 +1,9 @@
 import Notes from "../models/notesModel.js";
 
 export const getAllNotes = async (req, res) => {
+  const data = req.user;
   const notes = await Notes.find({}).sort({ updatedAt: -1 });
-  return res.send({ status: true, notes });
+  return res.send({ status: true, user: data.user, notes });
 };
 
 export const getSingleNote = async (req, res) => {

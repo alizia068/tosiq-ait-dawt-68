@@ -18,7 +18,8 @@ const ForgotPassword = () => {
         const response = await axios.post(FORGOT_PASSWORD_URL, data);
         if (response.data.status == true) {
           toast.success(response.data.message);
-          // navigate('/verify-otp')
+          localStorage.setItem("forgotUserEmail", data.email)
+          navigate('/verify-otp')
           return;
         } else {
           toast.error(response.data.message);

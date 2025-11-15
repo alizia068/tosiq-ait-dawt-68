@@ -19,8 +19,6 @@ const NotesList = () => {
   const [notes, setNotes] = useState([]);
   const [show, setShow] = useState(false);
   const { register, handleSubmit, reset } = useForm();
-    const params = useParams();
-    console.log(params.user);
 
   const handleCloseNoteModal = () => setShow(false);
   const handleShowNoteModal = () => setShow(true);
@@ -34,6 +32,7 @@ const NotesList = () => {
       });
       if (result.data && result.data.status == true) {
         setNotes(result.data.notes);
+        localStorage.setItem("authUser", JSON.stringify(result.data.user));
       } else {
         toast.error(result.data.message);
         return;
@@ -104,7 +103,13 @@ const NotesList = () => {
   return (
     <Container>
       <div>
-        <Nav />
+        <Nav> 
+          <div>
+            <Button variant="primary" size="sm" onClick={handleShowNoteModal}>
+              Add note
+            </Button>
+          </div>
+        </Nav>
 
         <div className="text-center">
           {notes.length == 0 && "No notes found"}

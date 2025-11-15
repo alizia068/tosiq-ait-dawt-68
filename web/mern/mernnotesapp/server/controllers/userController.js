@@ -99,3 +99,27 @@ export const sendOTP = async (req, res) => {
     }
 
 }
+
+export const verifyOTP = async (req, res) => {
+    const { email, otp } = req.body;
+
+    if (!otp) return res.send({status: false, message: "Please provide OTP code"});
+
+    try {
+        let user = await User.findOne({ email })
+        // check existing user
+        if (!user) {
+            return res.send({status: false, message: "User not found with this email"})
+        }
+
+        if (otp != user.otp) return res.send({status: false, message: "OTP didn't matched"});
+
+        user.otp = null;
+        user.isVerified = true;
+        await user.save();
+        return res.send({status: true, message: "User verified"});
+
+    } catch (error) {
+        console.log("Error: ", error)
+    }
+}
