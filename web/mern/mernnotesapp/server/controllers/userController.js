@@ -123,3 +123,29 @@ export const verifyOTP = async (req, res) => {
         console.log("Error: ", error)
     }
 }
+
+export const resetPassword = async (req, res) => {
+    const data = req.body;
+    try {
+        let user = await User.findOne({email: data.email});
+        if (!user) return res.send({status: false, message: "User not found"});
+
+        // encrypt password :: 12345 => $deqwd32342f25f52232f2
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(data.newPassword, salt);
+
+        user.email = data.email;
+        user.password = hashedPassword;
+
+        const result = await user.save();
+        if (result) {
+            return res.send({status: true, message: "Password has been reset"});
+        } else {
+            return res.send({status: false, message: "Failed to update password"});
+        }
+
+
+    } catch (error) {
+        console.log("Error: ", error);
+    }
+}

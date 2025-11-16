@@ -1,5 +1,5 @@
 import express from 'express'
-import { allUsers, login, sendOTP, signup, verifyOTP } from '../controllers/userController.js';
+import { allUsers, login, sendOTP, signup, verifyOTP, resetPassword } from '../controllers/userController.js';
 
 const userRoute = express.Router();
 
@@ -9,6 +9,6 @@ userRoute.post('/auth/signup', signup)
 userRoute.post('/auth/login', login)
 userRoute.post('/auth/forgot-password', sendOTP)
 userRoute.post('/auth/verify-otp', verifyOTP)
-// userRoute.post('/auth/forgot-password', sendOTP)
+userRoute.post('/auth/reset-password', resetPassword)
 
 export default userRoute
