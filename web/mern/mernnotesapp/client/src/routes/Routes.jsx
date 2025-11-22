@@ -16,7 +16,7 @@ const Routes = () => {
     { path: "/verify-otp", element: <VerifyOtp /> },
     { path: "/reset-password", element: <ResetPassword /> },
 
-    { path: "/", element: <NotesList /> },
+    { path: "/", element: <NotesList />},
     { path: "/notes/edit/:id", element: <DetailNote /> },
     { path: "/notes/update", element: <NotesList /> },
     { path: "*", element: <NotesList /> },

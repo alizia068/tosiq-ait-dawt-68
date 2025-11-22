@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { NavLink, useParams } from "react-router";
+import { NavLink, useNavigate, useParams } from "react-router";
 import { SINGLE_NOTE, UPDATE_NOTE } from "../resource/apis";
 import toast from "react-hot-toast";
 import Nav from "../components/Nav";
@@ -11,7 +11,11 @@ const DetailNote = () => {
   const { register, handleSubmit, reset } = useForm();
   const params = useParams();
   const noteId = params.id;
-
+  const navigate = useNavigate();
+  const authUser = localStorage.getItem("token");
+  if (!authUser) {
+    navigate('/login');
+  }
   useEffect(() => {
     getSingleNote();
   }, [noteId]);

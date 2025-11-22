@@ -13,11 +13,16 @@ import { ALL_NOTES, CREATE_NOTE, DELETE_NOTE } from "../resource/apis";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { FaEdit, FaTrash } from "react-icons/fa";
-import { NavLink, useParams } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 import Nav from "../components/Nav";
 const NotesList = () => {
   const [notes, setNotes] = useState([]);
   const [show, setShow] = useState(false);
+  const navigate = useNavigate();
+  const authUser = localStorage.getItem("token");
+  if (!authUser) {
+    navigate('/login')
+  }
   const { register, handleSubmit, reset } = useForm();
 
   const handleCloseNoteModal = () => setShow(false);
