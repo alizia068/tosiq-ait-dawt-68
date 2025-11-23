@@ -12,10 +12,9 @@ export const useAuth = () => {
     return context;
 }
 
-export const AuthProvider = () => {
+export const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-
     useEffect (() => {
         const userToken = localStorage.getItem("token");
         if (userToken) {
@@ -52,9 +51,9 @@ export const AuthProvider = () => {
     }
 
     const isAuthenticated = !!user; // null | undefined -> false, object -> true
-
+    const values = { user, loading, isAuthenticated, login, logout };
     return (
-        <AuthContext.Provider value={{ user, loading, isAuthenticated, login, logout }}>
+        <AuthContext.Provider value={values}>
             {children}
         </AuthContext.Provider>
     )

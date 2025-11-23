@@ -1,14 +1,16 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { useNavigate, useParams, NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 import { LOGIN_URL } from "../resource/apis";
+import { useAuth } from "../AuthContext";
 
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
   const [isLoading, setIsLoading] = useState(false);
+  const { login } = useAuth();
   const navigate = useNavigate();
 
   // update
@@ -17,9 +19,9 @@ const Login = () => {
       setIsLoading(true);
       const response = await axios.post(LOGIN_URL, data);
       if (response.data.status == true) {
-        response.data.token && localStorage.setItem('token', response.data.token)
         toast.success(response.data.message);
-        navigate('/')
+        login(response.data.token, response.data.user);
+        navigate("/");
       } else {
         toast.error(response.data.message);
         return;

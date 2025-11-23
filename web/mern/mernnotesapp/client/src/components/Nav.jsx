@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Button, Container, Navbar, NavDropdown } from "react-bootstrap";
 import toast from "react-hot-toast";
 import { NavLink, useNavigate } from "react-router";
+import { useAuth } from "../AuthContext";
 
 const Nav = ({ children }) => {
-  const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(false);
   const userToken = localStorage.getItem("token");
+  const { logout } = useAuth();
+  const navigate = useNavigate();
   const authUser = JSON.parse(localStorage.getItem("authUser"));
   useEffect(() => {
     if (userToken) {
@@ -17,14 +19,9 @@ const Nav = ({ children }) => {
   });
 
   const handleLogout = () => {
-    if (userToken) {
-      localStorage.removeItem("token");
-      navigate("/login");
-      toast.success("User Logout successful");
-      return;
-    } else {
-      toast.error("Failed to logout");
-    }
+    logout();
+    navigate("/login");
+    toast.success("Logged out successfully");
   };
 
   return (

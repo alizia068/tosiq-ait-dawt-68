@@ -12,10 +12,6 @@ const DetailNote = () => {
   const params = useParams();
   const noteId = params.id;
   const navigate = useNavigate();
-  const authUser = localStorage.getItem("token");
-  if (!authUser) {
-    navigate('/login');
-  }
   useEffect(() => {
     getSingleNote();
   }, [noteId]);

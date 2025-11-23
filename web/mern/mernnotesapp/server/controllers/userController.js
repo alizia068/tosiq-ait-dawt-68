@@ -10,7 +10,16 @@ export const verifyUser = async (req, res) => {
         const token = userToken.split(" ")[1];
         const tokenData = jwt.verify(token, process.env.JWT_SECRET);
 
-        console.log("Token data: ", tokenData);
+        if (tokenData) {
+            const user = await User.findById(tokenData.user.id)
+            if (user) {
+                return res.send({status: true, user});
+            } else {
+                return res.send({status: false, message: "User not found"});
+            }
+        } else {
+            return res.send({status: false, message: "Invalid token"});
+        }
 
     } catch (error) {
         console.log("Error: ", error)

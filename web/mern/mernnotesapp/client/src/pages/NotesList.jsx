@@ -19,10 +19,6 @@ const NotesList = () => {
   const [notes, setNotes] = useState([]);
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
-  const authUser = localStorage.getItem("token");
-  if (!authUser) {
-    navigate('/login')
-  }
   const { register, handleSubmit, reset } = useForm();
 
   const handleCloseNoteModal = () => setShow(false);
