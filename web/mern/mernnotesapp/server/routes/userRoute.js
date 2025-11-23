@@ -1,9 +1,10 @@
 import express from 'express'
-import { allUsers, login, sendOTP, signup, verifyOTP, resetPassword } from '../controllers/userController.js';
+import { verifyUser, allUsers, login, sendOTP, signup, verifyOTP, resetPassword } from '../controllers/userController.js';
 
 const userRoute = express.Router();
 
 // http://localhost:5000/api/v1/auth/signup
+userRoute.get('/auth/verify-user', verifyUser)
 userRoute.get('/auth/users', allUsers)
 userRoute.post('/auth/signup', signup)
 userRoute.post('/auth/login', login)

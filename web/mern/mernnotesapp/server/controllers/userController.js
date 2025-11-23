@@ -4,6 +4,19 @@ import User from "../models/userModel.js";
 import { generateOTP } from "../utils/generateOTP.js";
 import { sendEmail } from "../utils/sendEmail.js";
 
+export const verifyUser = async (req, res) => {
+    const userToken = req.headers.authorization;
+    try {
+        const token = userToken.split(" ")[1];
+        const tokenData = jwt.verify(token, process.env.JWT_SECRET);
+
+        console.log("Token data: ", tokenData);
+
+    } catch (error) {
+        console.log("Error: ", error)
+    }
+}
+
 export const allUsers = async (req, res) => {
     const users = await User.find({});
     return res.send({status: true, users})
