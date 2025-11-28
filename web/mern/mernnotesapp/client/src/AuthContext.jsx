@@ -45,9 +45,17 @@ export const AuthProvider = ({children}) => {
         setUser(null);
     }
 
-    const login = (token, userData) => {
+    // const login = (token, userData) => {
+    //     localStorage.setItem("token", token);
+    //     setUser(userData);
+    // }
+    const login = async (token, userData = null) => {
         localStorage.setItem("token", token);
-        setUser(userData);
+        if (userData) {
+            setUser(userData);
+        } else {
+            await validateUserToken(token);
+        }
     }
 
     const isAuthenticated = !!user; // null | undefined -> false, object -> true

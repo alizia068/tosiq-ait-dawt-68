@@ -21,7 +21,6 @@ const Login = () => {
       if (response.data.status == true) {
         toast.success(response.data.message);
         login(response.data.token, response.data.user);
-        navigate("/");
       } else {
         toast.error(response.data.message);
         return;
