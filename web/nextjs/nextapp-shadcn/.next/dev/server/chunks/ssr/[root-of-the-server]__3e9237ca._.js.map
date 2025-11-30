@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///F:/Tosiq/web/nextjs/nextapp-shadcn/app/page.js"],"sourcesContent":["''\nimport React from 'react'\n\nconst Home = () => {\n  return (\n    <>\n      <div>\n        Welcome to the Home Page\n      </div>\n\n    </>\n  )\n}\n\nexport default Home\n"],"names":[],"mappings":";;;;;AACA;AADA;;;AAGA,MAAM,OAAO;IACX,qBACE;kBACE,cAAA,8OAAC;sBAAI;;;;;;;AAMX;uCAEe"}}]
+}

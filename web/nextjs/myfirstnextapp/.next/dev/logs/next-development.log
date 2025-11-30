@@ -1,0 +1,454 @@
+[00:00:02.479] Server  LOG      ✓ Ready in 1648ms
+[00:00:46.013] Server  LOG      ○ Compiling / ...
+[00:00:49.015] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:51.602] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{lazyData:null, ...}}>
+                    <__next_viewport_boundary__>
+                    <Next.Metadata>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                    ...
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_2ae47f08-module__h69qWW__variable geist_mono_eb58308d-module__w_p2Lq__var..."
+-                           __processed_78ba4e10-8a0f-4fd2-9aa5-913220b2c4a4__="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+-                           cz-shortcut-listen="true"
+                          >
+                            ...
+                              <SegmentViewNode type="page" pagePath="page.js">
+                                <SegmentTrieNode>
+                                <Home>
+                                  <div
+                                    className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark..."
+-                                   bis_skin_checked="1"
+                                  >
+                                    <main className="flex min-h...">
+                                      <img>
+                                      <ImagePreload>
+                                      <div
+                                        className="flex flex-col items-center gap-6 text-center sm:items-start sm:text..."
+-                                       bis_skin_checked="1"
+                                      >
+                                      <div
+                                        className="flex flex-col gap-4 text-base font-medium sm:flex-row"
+-                                       bis_skin_checked="1"
+                                      >
+                              ...
+                  ...
+
+[00:00:51.602] Browser WARN    Image with src "http://localhost:3000/vercel.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:03:14.845] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:16.750] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_2ae47f08-module__h69qWW__variable geist_mono_eb58308d-module__w_p2Lq__var..."
+-                           cz-shortcut-listen="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+-                           __processed_ac51836b-9f76-4e72-94ac-67bf5c0a744b__="true"
+                          >
+                            ...
+                              <Home params={Promise} searchParams={Promise}>
+                                <div className="flex min-h...">
+                                  <main className="flex min-h...">
+                                    <img>
+                                    <ImagePreload>
+                                    <div
+                                      className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left"
+-                                     bis_skin_checked="1"
+                                    >
+                                    <div
+                                      className="flex flex-col gap-4 text-base font-medium sm:flex-row"
+-                                     bis_skin_checked="1"
+                                    >
+                  ...
+
+[00:03:16.750] Browser WARN    Image with src "http://localhost:3000/vercel.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:03:30.203] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.341] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\.next\dev\server\chunks\ssr\node_modules_next_dist_3bec4d31._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.393] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.434] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.441] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.445] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.452] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.460] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.463] Server  ERROR    ⨯ Error: Cannot access unstable_prefetch.mode on the server. You cannot dot into a client module from a server component. You can only pass the imported name through.
+[00:03:30.482] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.484] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\.next\dev\server\chunks\ssr\node_modules_next_dist_3bec4d31._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.486] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.491] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.493] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.494] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.496] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.498] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.500] Server  ERROR    ⨯ Error: Cannot access unstable_prefetch.mode on the server. You cannot dot into a client module from a server component. You can only pass the imported name through.
+[00:03:30.516] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./app/page.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:03:30.632] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.647] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\.next\dev\server\chunks\ssr\node_modules_next_dist_3bec4d31._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.650] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.652] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.653] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.654] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.661] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.663] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.664] Server  ERROR    ⨯ Error: Cannot access unstable_prefetch.mode on the server. You cannot dot into a client module from a server component. You can only pass the imported name through.
+[00:03:30.686] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.692] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\.next\dev\server\chunks\ssr\node_modules_next_dist_3bec4d31._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.695] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.719] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.740] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.747] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.750] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.754] Server  ERROR   F:\Tosiq\web\nextjs\myfirstnextapp\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:30.765] Server  ERROR    ⨯ Error: Cannot access unstable_prefetch.mode on the server. You cannot dot into a client module from a server component. You can only pass the imported name through.
+[00:03:32.759] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./app/page.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:03:35.331] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:35.896] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{lazyData:null, ...}}>
+                    <__next_viewport_boundary__>
+                    <Next.Metadata>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                    ...
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_2ae47f08-module__h69qWW__variable geist_mono_eb58308d-module__w_p2Lq__var..."
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+-                           __processed_d22535e3-88e7-4e7e-87ff-e131f3a1a28d__="true"
+                          >
+                            ...
+                              <SegmentViewNode type="page" pagePath="page.js">
+                                <SegmentTrieNode>
+                                <ClientPageRoot Component={function page} serverProvidedParams={{...}}>
+                                  <page params={Promise} searchParams={Promise}>
+                                    <div
+-                                     bis_skin_checked="1"
+                                    >
+                  ...
+
+[00:03:39.502] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./app/page.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:03:39.765] Server  LOG      ✓ Compiled in 23ms
+[00:03:40.052] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:40.875] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_2ae47f08-module__h69qWW__variable geist_mono_eb58308d-module__w_p2Lq__var..."
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+-                           __processed_005f5d0d-f61a-4549-900a-2d73c6c5afb9__="true"
+                          >
+                  ...
+
+[00:04:07.006] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:08.132] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_2ae47f08-module__h69qWW__variable geist_mono_eb58308d-module__w_p2Lq__var..."
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+                          >
+                            ...
+                              <SegmentViewNode type="page" pagePath="page.js">
+                                <SegmentTrieNode>
+                                <ClientPageRoot Component={function page} serverProvidedParams={{...}}>
+                                  <page params={Promise} searchParams={Promise}>
+                                    <div
+-                                     bis_skin_checked="1"
+                                    >
++                                     This is my home page
+                  ...
+
+[00:04:21.523] Server  LOG      ✓ Compiled in 161ms
+[00:04:21.631] Browser ERROR   ./app/layout.js:15:14
+Ecmascript file had an error
+  13 | });
+  14 |
+> 15 | export const metadata = {
+     |              ^^^^^^^^
+  16 |   title: "Create Next App",
+  17 |   description: "Generated by create next app",
+  18 | };
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/layout.js [Client Component Browser]
+    ./app/layout.js [Server Component]
+
+  Client Component SSR:
+    ./app/layout.js [Client Component SSR]
+    ./app/layout.js [Server Component]
+[00:04:30.427] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:45.775] Server  LOG      ✓ Compiled in 96ms
+[00:04:46.151] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:47.181] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} ...>
+                        <RootLayout params={Promise}>
+                          <html lang="en">
+                            <body
+                              className="geist_2ae47f08-module__h69qWW__variable geist_mono_eb58308d-module__w_p2Lq__v..."
+-                             bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaW..."
+-                             __processed_fa3bcc0e-2d55-4edb-b259-691b007bdf31__="true"
+                            >
+                  ...
+
+[00:04:58.879] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:08.182] Server  LOG      ✓ Compiled in 93ms
+[00:05:10.743] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:11.876] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{lazyData:null, ...}}>
+                    <__next_viewport_boundary__>
+                    <Next.Metadata>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                    ...
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} ...>
+                        <RootLayout params={Promise}>
+                          <html lang="en">
+                            <body
+                              className="geist_2ae47f08-module__h69qWW__variable geist_mono_eb58308d-module__w_p2Lq__v..."
+-                             bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaW..."
+-                             __processed_02ae544d-b86d-40e7-9013-85cb7abc00a5__="true"
+                            >
+                              ...
+                                <SegmentViewNode type="page" pagePath="page.js">
+                                  <SegmentTrieNode>
+                                  <ClientPageRoot Component={function page} serverProvidedParams={{...}}>
+                                    <page params={Promise} searchParams={Promise}>
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
++                                       This is my home page
+                  ...
+
+[00:06:11.744] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:12.876] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/about-us" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} ...>
+                        <RootLayout params={Promise}>
+                          <html lang="en">
+                            <body
+                              className="geist_2ae47f08-module__h69qWW__variable geist_mono_eb58308d-module__w_p2Lq__v..."
+-                             cz-shortcut-listen="true"
+-                             bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaW..."
+-                             __processed_8a199190-b5bc-4197-8848-1bfb30ca6fa8__="true"
+                            >
+                  ...
+

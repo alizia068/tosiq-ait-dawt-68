@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///F:/Tosiq/web/nextjs/myfirstnextapp/app/%28pages%29/about-us/page.jsx"],"sourcesContent":["'use client'\r\nimport React from 'react'\r\n\r\nconst page = () => {\r\n  return (\r\n    <div>\r\n      This is about page\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default page\r\n"],"names":[],"mappings":";;;;;AACA;AADA;;;AAGA,MAAM,OAAO;IACX,qBACE,8OAAC;kBAAI;;;;;;AAIT;uCAEe"}},
+    {"offset": {"line": 27, "column": 0}, "map": {"version":3,"sources":["file:///F:/Tosiq/web/nextjs/myfirstnextapp/node_modules/next/src/server/route-modules/app-page/vendored/ssr/react.ts"],"sourcesContent":["module.exports = (\n  require('../../module.compiled') as typeof import('../../module.compiled')\n).vendored['react-ssr']!.React\n"],"names":["module","exports","require","vendored","React"],"mappings":"AAAAA,OAAOC,OAAO,GACZC,QAAQ,4HACRC,QAAQ,CAAC,YAAY,CAAEC,KAAK","ignoreList":[0]}}]
+}

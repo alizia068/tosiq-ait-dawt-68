@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///F:/Tosiq/web/nextjs/myfirstnextapp/app/%28pages%29/about-us/page.jsx"],"sourcesContent":["'use client'\r\nimport React from 'react'\r\n\r\nconst page = () => {\r\n  return (\r\n    <div>\r\n      This is about page\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default page\r\n"],"names":[],"mappings":";;;;;AACA;AADA;;;AAGA,MAAM,OAAO;IACX,qBACE,6LAAC;kBAAI;;;;;;AAIT;uCAEe"}}]
+}
