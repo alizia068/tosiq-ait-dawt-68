@@ -1,7 +1,7 @@
-[00:00:02.073] Server  LOG      ✓ Ready in 1313ms
-[00:00:05.174] Server  LOG      ○ Compiling / ...
-[00:00:10.245] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:11.399] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:09.954] Server  LOG      ✓ Ready in 7.5s
+[00:04:19.137] Server  LOG      ○ Compiling / ...
+[00:04:32.985] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:33.220] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -28,22 +28,21 @@ It can also happen if the client has a browser extension installed which messes 
                       <SegmentTrieNode>
                       <link>
                       <script>
+                      <script>
+                      <script>
                       <RootLayout>
                         <html lang="en">
                           <body
                             className="geist_2ae47f08-module__h69qWW__variable geist_mono_eb58308d-module__w_p2Lq__var..."
--                           cz-shortcut-listen="true"
 -                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
--                           __processed_dbc28052-8705-4051-b634-e1929a20e87b__="true"
+-                           __processed_8eb970fe-9a02-43b5-b456-bab6ecf49576__="true"
                           >
                   ...
 
-[00:01:06.993] Server  LOG      ✓ Compiled in 148ms
-[00:01:07.790] Browser ERROR   uncaughtError: ReferenceError: ArrowUpIcon is not defined
-[00:01:13.603] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:01:13.634] Server  LOG      ✓ Compiled in 144ms
-[00:01:17.259] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:17.432] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:05:11.124] Server  LOG      ✓ Compiled in 179ms
+[00:06:07.596] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:17.809] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:18.904] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -64,138 +63,157 @@ It can also happen if the client has a browser extension installed which messes 
             <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
               <RedirectBoundary>
                 <RedirectErrorBoundary router={{...}}>
-                  <Head headCacheNode={{lazyData:null, ...}}>
-                    <__next_viewport_boundary__>
-                    <Next.Metadata>
-                      <div
-                        hidden={true}
--                       bis_skin_checked="1"
-                      >
-                    ...
+                  <Head>
                   <__next_root_layout_boundary__>
                     <SegmentViewNode type="layout" pagePath="layout.js">
                       <SegmentTrieNode>
                       <link>
+                      <script>
+                      <script>
                       <script>
                       <RootLayout>
                         <html lang="en">
                           <body
                             className="geist_2ae47f08-module__h69qWW__variable geist_mono_eb58308d-module__w_p2Lq__var..."
 -                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
--                           __processed_91e3236c-c90f-4048-9dff-37e2e9613ddb__="true"
+-                           __processed_24e0574c-2045-4975-a4bf-9baf576d5623__="true"
+                          >
+                  ...
+
+[00:06:36.380] Server  ERROR   F:\Tosiq\web\nextjs\nextapp-shadcn\.next\dev\server\chunks\ssr\[root-of-the-server]__e0c4637c._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:36.402] Server  ERROR    ⨯ ReferenceError: Link is not defined
+[00:06:36.468] Server  ERROR   F:\Tosiq\web\nextjs\nextapp-shadcn\.next\dev\server\chunks\ssr\[root-of-the-server]__e0c4637c._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:36.470] Server  ERROR    ⨯ ReferenceError: Link is not defined
+[00:06:36.644] Browser ERROR   uncaughtError: ReferenceError: Link is not defined
+[00:06:39.270] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:06:39.973] Server  LOG      ✓ Compiled in 1281ms
+[00:06:40.019] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:06:40.623] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:41.828] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_2ae47f08-module__h69qWW__variable geist_mono_eb58308d-module__w_p2Lq__var..."
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+-                           __processed_d5b0346b-5188-444b-adfa-f661cf478e90__="true"
                           >
                             ...
-                              <SegmentViewNode type="page" pagePath="page.js">
-                                <SegmentTrieNode>
-                                <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
-                                  <Home params={Promise} searchParams={Promise}>
-                                    <div
--                                     bis_skin_checked="1"
-                                    >
-+                                     Welcome to the Home Page
-                                    <div
--                                     bis_skin_checked="1"
-                                    >
+                              <TooltipProvider data-slot="tooltip-pr..." delayDuration={0}>
+                                <TooltipProviderProvider scope={undefined} isOpenDelayedRef={{current:true}} ...>
+                                  <div
+                                    data-slot="sidebar-wrapper"
+                                    style={{--sidebar-width:"16rem",--sidebar-width-icon:"3rem"}}
+                                    className="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-sv..."
+-                                   bis_skin_checked="1"
+                                  >
+                                    <AppSidebar>
+                                      <Sidebar>
+                                        <div
+                                          className="group peer text-sidebar-foreground hidden md:block"
+                                          data-state="expanded"
+                                          data-collapsible=""
+                                          data-variant="sidebar"
+                                          data-side="left"
+                                          data-slot="sidebar"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            data-slot="sidebar-gap"
+                                            className="relative w-(--sidebar-width) bg-transparent transition-[width] ..."
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            data-slot="sidebar-container"
+                                            className="fixed inset-y-0 z-10 hidden h-svh w-(--sidebar-width) transitio..."
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              data-sidebar="sidebar"
+                                              data-slot="sidebar-inner"
+                                              className="bg-sidebar group-data-[variant=floating]:border-sidebar-borde..."
+-                                             bis_skin_checked="1"
+                                            >
+                                              <SidebarContent>
+                                                <div
+                                                  data-slot="sidebar-content"
+                                                  data-sidebar="content"
+                                                  className="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-da..."
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <SidebarGroup>
+                                                    <div
+                                                      data-slot="sidebar-group"
+                                                      data-sidebar="group"
+                                                      className="relative flex w-full min-w-0 flex-col p-2"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <SidebarGroupLabel>
+                                                        <div
+                                                          data-slot="sidebar-group-label"
+                                                          data-sidebar="group-label"
+                                                          className={"text-sidebar-foreground/70 ring-sidebar-ring fl..."}
+-                                                         bis_skin_checked="1"
+                                                        >
++                                                         Application
+                                                      <SidebarGroupContent>
+                                                        <div
+                                                          data-slot="sidebar-group-content"
+                                                          data-sidebar="group-content"
+                                                          className="w-full text-sm"
+-                                                         bis_skin_checked="1"
+                                                        >
+                                    <main>
+                                      <SidebarTrigger>
                                       <div
-                                        className="flex flex-wrap items-center gap-2 md:flex-row"
+                                        className="m-2"
 -                                       bis_skin_checked="1"
                                       >
-                  ...
-
-[00:02:27.517] Server  LOG      ✓ Compiled in 95ms
-[00:02:53.784] Server  LOG      ✓ Compiled in 65ms
-[00:02:56.622] Server  LOG      ✓ Compiled in 63ms
-[00:02:58.336] Server  LOG      ✓ Compiled in 62ms
-[00:03:00.496] Server  LOG      ✓ Compiled in 93ms
-[00:03:05.109] Server  LOG      ✓ Compiled in 77ms
-[00:03:05.822] Browser ERROR   uncaughtError: ReferenceError: AlertDialogTrigger is not defined
-[00:03:15.675] Server  LOG      ✓ Compiled in 40ms
-[00:03:15.791] Browser ERROR   ./app/page.js:5:6
-Parsing ecmascript source code failed
-  3 | import { ArrowUpIcon } from 'lucide-react'
-  4 | import React from 'react'
-> 5 | Show Dialog
-    |      ^^^^^^
-  6 | Copy
-  7 | import {
-  8 |   AlertDialog,
-
-Expected ';', '}' or <eof>
-
-Import traces:
-  Client Component Browser:
-    ./app/page.js [Client Component Browser]
-    ./app/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/page.js [Client Component SSR]
-    ./app/page.js [Server Component]
-[00:03:20.788] Browser ERROR   ./app/page.js:5:6
-Parsing ecmascript source code failed
-  3 | import { ArrowUpIcon } from 'lucide-react'
-  4 | import React from 'react'
-> 5 | Show Dialog
-    |      ^^^^^^
-  6 | Copy
-  7 | import {
-  8 |   AlertDialog,
-
-Expected ';', '}' or <eof>
-
-Import traces:
-  Client Component Browser:
-    ./app/page.js [Client Component Browser]
-    ./app/page.js [Server Component]
-
-  Client Component SSR:
-    ./app/page.js [Client Component SSR]
-    ./app/page.js [Server Component]
-[00:03:26.568] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:03:26.853] Server  ERROR   F:\Tosiq\web\nextjs\nextapp-shadcn\.next\dev\server\chunks\ssr\[root-of-the-server]__37def40d._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:03:26.855] Server  ERROR    ⨯ ReferenceError: AlertDialog is not defined
-[00:03:26.896] Browser ERROR   uncaughtError: ReferenceError: AlertDialogTrigger is not defined
-[00:03:29.732] Server  ERROR   F:\Tosiq\web\nextjs\nextapp-shadcn\.next\dev\server\chunks\ssr\[root-of-the-server]__37def40d._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:03:29.734] Server  ERROR    ⨯ ReferenceError: AlertDialog is not defined
-[00:03:30.074] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:30.795] Browser ERROR   uncaughtError: ReferenceError: AlertDialogTrigger is not defined
-[00:03:30.867] Server  ERROR   F:\Tosiq\web\nextjs\nextapp-shadcn\.next\dev\server\chunks\ssr\[root-of-the-server]__37def40d._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:03:30.868] Server  ERROR    ⨯ ReferenceError: AlertDialog is not defined
-[00:03:33.757] Server  LOG      ✓ Compiled in 707ms
-[00:03:36.203] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:36.603] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.js">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html lang="en">
-                          <body
-                            className="geist_2ae47f08-module__h69qWW__variable geist_mono_eb58308d-module__w_p2Lq__var..."
--                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
--                           __processed_40d99a19-7c60-47b9-8235-88f3b11a1fba__="true"
--                           cz-shortcut-listen="true"
-                          >
+                                        ...
+                                          <SegmentViewNode type="page" pagePath="page.js">
+                                            <SegmentTrieNode>
+                                            <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                                              <Home params={Promise} searchParams={Promise}>
+                                                <div
+-                                                 bis_skin_checked="1"
+                                                >
++                                                 Welcome to the Home Page
+                                                <div
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="flex flex-wrap items-center gap-2 md:flex-row"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                <div
+-                                                 bis_skin_checked="1"
+                                                >
                   ...
 
